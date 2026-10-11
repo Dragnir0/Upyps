@@ -1,5 +1,7 @@
 (function () {
   const root = document.documentElement;
+  const menuToggle = document.querySelector('.menu-toggle');
+  const siteMenu = document.getElementById('site-menu');
   const buttons = Array.from(document.querySelectorAll('[data-lang-toggle]'));
 
   function applyLanguage(lang) {
@@ -42,4 +44,20 @@
       applyLanguage(button.getAttribute('data-lang-toggle'));
     });
   });
+
+  if (menuToggle && siteMenu) {
+    menuToggle.addEventListener('click', function () {
+      const isOpen = siteMenu.classList.toggle('active');
+      menuToggle.classList.toggle('active', isOpen);
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    siteMenu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', function () {
+        siteMenu.classList.remove('active');
+        menuToggle.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
 }());
