@@ -591,36 +591,3 @@ details p {
   .hero::before { right: 0; width: 100%; height: 8px; clip-path: none; }
 }
 .btn { text-align: center; }
-
-/* FAQ Desktop Readability Improvements */
-.faq {
-  max-width: 800px; /* Prevents text from stretching too wide on large screens */
-  margin: 0 auto; /* Centers the FAQ on the page */
-}
-
-.faq details {
-  margin-bottom: 1.2rem; /* Adds space between each question block */
-  border-bottom: 1px solid #eee; /* Light divider line */
-  padding-bottom: 1.2rem;
-}
-
-.faq summary {
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 1.1rem;
-  padding: 0.5rem 0;
-  color: #000; /* Adjust to match your theme */
-}
-
-.faq p {
-  margin-top: 0.8rem;
-  padding: 0 0 0 1rem; /* Indents the answer slightly for better visual hierarchy */
-  line-height: 1.6; /* Improves readability */
-  color: #333; /* Slightly softer than pure black for large text blocks */
-  font-size: 1rem;
-}
-
-/* Optional: If you want to style the arrow marker */
-.faq summary::marker {
-  color: #cd0511; /* Uses your HFM red accent color */
-  }
