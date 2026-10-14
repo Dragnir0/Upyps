@@ -555,6 +555,9 @@ details p {
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
 }
 
+.roles-head { margin-top: 56px; }
+.callout { margin: 28px auto 0; max-width: 52em; padding: 16px 20px; border-left: 4px solid var(--red, #cd0511); background: var(--grey, #f2f2f2); border-radius: 0 8px 8px 0; font-size: 0.95rem; line-height: 1.55; }
+.alt .callout, .callout { color: var(--text, #171717); }
 /* ---- v2 additions ---- */
 .site-footer a { color: var(--white); text-underline-offset: 3px; }
 .site-footer .logo-footer { width: 112px; height: auto; }
