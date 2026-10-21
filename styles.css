@@ -594,3 +594,66 @@ details p {
   .hero::before { right: 0; width: 100%; height: 8px; clip-path: none; }
 }
 .btn { text-align: center; }
+
+/* ---- resources page, weekly card ---- */
+[hidden] { display: none !important; }
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+html[data-lang="fr"] [data-only="en"] { display: none !important; }
+.res-hero { padding: 56px 0 36px; background: var(--black); color: var(--white); }
+.res-hero h1 { margin: 0 0 14px; font-size: clamp(1.9rem, 6.5vw, 2.6rem); line-height: 1.1; letter-spacing: -0.03em; }
+.lead-dark { margin: 0; max-width: 38em; color: rgba(255,255,255,0.82); font-size: 1.02rem; line-height: 1.65; }
+.disclosure.left { margin-left: 0; text-align: left; }
+.res-group { padding: 56px 0 8px; }
+.res-group + .res-group { padding-top: 40px; }
+.res-grid { display: grid; align-items: start; gap: 20px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); margin-top: 28px; }
+.rcard { display: flex; flex-direction: column; }
+.rcard.open-wide { grid-column: 1 / -1; }
+.rcard h3 { margin-bottom: 8px; }
+.rcard p { margin: 0 0 12px; }
+.ractions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; margin-top: auto; padding-top: 6px; }
+.rlink { color: var(--red); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.rlink2 { color: var(--mid); text-underline-offset: 3px; }
+.reveal { appearance: none; cursor: pointer; font: inherit; font-weight: 700; color: var(--black); background: var(--white); border: 2px solid var(--black); border-radius: 999px; padding: 8px 18px; min-height: 44px; }
+.reveal:hover { background: var(--black); color: var(--white); }
+.reveal:focus-visible, .rlink:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; }
+.reveal .when-open { display: none; }
+.reveal[aria-expanded="true"] .when-open { display: inline; }
+.reveal[aria-expanded="true"] .when-closed { display: none; }
+.rnote { margin: 10px 0 0; color: var(--mid); font-size: 0.85rem; line-height: 1.5; }
+.rslot:empty { display: none; }
+.rslot { margin-top: 14px; max-width: 100%; overflow: hidden; }
+.rslot img, .rslot iframe { display: block; max-width: 100%; height: auto; border: 0; border-radius: 8px; }
+.rslot iframe { height: auto; }
+.rslot-box iframe { width: 300px; height: 205px; }
+.rslot-calc iframe { width: 100%; max-width: 450px; height: 700px; }
+.rslot-ticker { background: #000; border-radius: 6px; height: 30px; }
+.rslot-ticker iframe { width: 1600px; max-width: none; height: 20px; margin-top: 5px; border-radius: 0; animation: upyps-ticker 50s linear infinite; }
+@keyframes upyps-ticker { from { transform: translateX(40%); } to { transform: translateX(-100%); } }
+@media (prefers-reduced-motion: reduce) { .rslot-ticker { overflow-x: auto; } .rslot-ticker iframe { animation: none; } }
+.small-callout { font-size: 0.85rem; max-width: none; margin-top: 28px; }
+.res-empty { padding: 56px 0; color: var(--mid); }
+.thisweek { padding: 40px 0; background: var(--grey); }
+.eyebrow-dark { margin: 0 0 12px; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red); }
+.spot { display: grid; gap: 18px; align-items: start; background: var(--white); border: 1px solid #e3e3e3; border-left: 4px solid var(--red); border-radius: 10px; padding: 24px; }
+.spot h3 { margin: 0 0 8px; font-size: 1.15rem; }
+.spot p { margin: 0 0 8px; }
+@media (min-width: 841px) { .spot { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 40px; padding: 28px 32px; } }
+
+/* ---- typography v3: calmer scale, shorter measure, more white space ---- */
+.hero h1 { font-size: clamp(1.9rem, 8vw, 2.3rem); line-height: 1.1; letter-spacing: -0.03em; max-width: 13em; }
+.lead { font-size: 1.04rem; line-height: 1.65; }
+.section-header h2 { font-size: clamp(1.55rem, 6.4vw, 1.85rem); line-height: 1.18; letter-spacing: -0.02em; }
+.card h3, .steps h3 { font-size: 1.1rem; }
+section { padding: 56px 0; }
+@media (min-width: 841px) {
+  body { line-height: 1.65; }
+  .hero h1 { font-size: clamp(2.5rem, 3.6vw, 3.1rem); line-height: 1.08; letter-spacing: -0.035em; max-width: 13em; }
+  .lead { font-size: 1.1rem; line-height: 1.65; max-width: 32em; }
+  .section-header h2 { font-size: clamp(1.7rem, 2.3vw, 2.15rem); }
+  .section-sub { font-size: 1rem; max-width: 38em; }
+  section { padding: 88px 0; }
+  .res-group { padding: 64px 0 8px; }
+  .grid, .res-grid { gap: 28px; }
+  .steps, .faq { max-width: 820px; }
+  .site-footer p { max-width: 62em; }
+}
