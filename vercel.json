@@ -12,6 +12,40 @@
       ],
       "destination": "https://upyps.com/$1",
       "permanent": true
+    },
+    {
+      "source": "/resources",
+      "destination": "/fr/resources",
+      "permanent": true
+    },
+    {
+      "source": "/legal",
+      "destination": "/fr/legal",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "^en.*"
+        }
+      ],
+      "destination": "/en",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "^fr.*"
+        }
+      ],
+      "destination": "/fr",
+      "permanent": false
     }
   ],
   "headers": [
@@ -20,7 +54,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'sha256-GE7NRcKKX1U5EOGIbWtXQ39ZwmFckcZc9cTAoO/Kc04='; style-src 'self'; img-src 'self' data: https://banner-api.hfm.com; font-src 'self'; frame-src https://prices.hfmarkets.com https://banner-api.hfm.com; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
+          "value": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://banner-api.hfm.com; font-src 'self'; frame-src https://prices.hfmarkets.com https://banner-api.hfm.com; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
         },
         {
           "key": "X-Content-Type-Options",
@@ -37,6 +71,33 @@
         {
           "key": "Permissions-Policy",
           "value": "camera=(), microphone=(), geolocation=(), payment=()"
+        }
+      ]
+    },
+    {
+      "source": "/(styles\\.css|main\\.js)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(favicon\\.svg|apple-touch-icon\\.png|icon-512\\.png|og\\.png)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2592000"
+        }
+      ]
+    },
+    {
+      "source": "/schedule.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
         }
       ]
     }
