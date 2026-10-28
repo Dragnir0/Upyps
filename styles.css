@@ -644,6 +644,23 @@ html[data-lang="fr"] [data-only="en"] { display: none !important; }
 .spot p { margin: 0 0 8px; }
 @media (min-width: 841px) { .spot { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 40px; padding: 28px 32px; } }
 
+/* ---- guide pages ---- */
+.prose ul.list, .prose ol.list { margin: 0 0 16px; padding-left: 1.3em; line-height: 1.7; }
+.prose .list li { margin: 0 0 8px; }
+.prose ol.list { list-style: none; padding-left: 0; }
+.tbl-wrap { overflow-x: auto; margin: 18px 0 8px; border: 1px solid #ddd; border-radius: 8px; }
+.tbl { border-collapse: collapse; width: 100%; min-width: 520px; font-size: 0.95rem; line-height: 1.5; }
+.tbl th, .tbl td { text-align: left; vertical-align: top; padding: 12px 14px; border-bottom: 1px solid #e6e6e6; }
+.tbl thead th { background: #f2f2f2; font-size: 0.85rem; letter-spacing: 0.02em; }
+.tbl tbody tr:last-child th, .tbl tbody tr:last-child td { border-bottom: 0; }
+.more-links { margin-top: 28px; font-size: 0.95rem; color: var(--mid); }
+.prose .callout { margin: 28px 0 0; max-width: none; }
+.guides-grid .card a { color: inherit; }
+.guides-grid .card h3 a { text-decoration: none; }
+.guides-grid .card h3 a:hover { color: var(--red); }
+
+.disc-link { color: inherit; text-decoration: underline; text-underline-offset: 3px; margin-left: 4px; }
+
 /* ---- typography v3: calmer scale, shorter measure, more white space ---- */
 .hero h1 { font-size: clamp(1.9rem, 8vw, 2.3rem); line-height: 1.1; letter-spacing: -0.03em; max-width: 13em; }
 .lead { font-size: 1.04rem; line-height: 1.65; }

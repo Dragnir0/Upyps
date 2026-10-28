@@ -161,4 +161,16 @@
 
   applySchedule();
   ready = true;
+
+  // Resources page: static HFM images display immediately (a privacy notice is shown); interactive tools still wait for a click.
+  if (document.getElementById('res-empty')) {
+    Array.prototype.forEach.call(document.querySelectorAll('.res-group button.reveal[data-kind="img"]'), function (btn) {
+      var item = btn.closest('[data-item]');
+      var group = btn.closest('.res-group');
+      if (item && !item.hidden && group && !group.hidden) {
+        btn.setAttribute('aria-expanded', 'true');
+        render(btn);
+      }
+    });
+  }
 }());
