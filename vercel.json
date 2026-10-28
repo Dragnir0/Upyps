@@ -19,7 +19,17 @@
       "permanent": true
     },
     {
+      "source": "/resources/",
+      "destination": "/fr/resources",
+      "permanent": true
+    },
+    {
       "source": "/legal",
+      "destination": "/fr/legal",
+      "permanent": true
+    },
+    {
+      "source": "/legal/",
       "destination": "/fr/legal",
       "permanent": true
     },
@@ -93,7 +103,7 @@
       ]
     },
     {
-      "source": "/schedule.js",
+      "source": "/schedule\\.js",
       "headers": [
         {
           "key": "Cache-Control",
@@ -104,11 +114,27 @@
   ],
   "rewrites": [
     {
-      "source": "/(favicon\\.svg|apple-touch-icon\\.png|icon-512\\.png|og\\.png|main\\.js|schedule\\.js|styles\\.css)",
-      "destination": "/$1"
+      "source": "/fr",
+      "destination": "/fr.html"
+    },
+    {
+      "source": "/fr/",
+      "destination": "/fr.html"
+    },
+    {
+      "source": "/en",
+      "destination": "/en.html"
+    },
+    {
+      "source": "/en/",
+      "destination": "/en.html"
     },
     {
       "source": "/fr/resources",
+      "destination": "/fr-resources.html"
+    },
+    {
+      "source": "/fr/resources/",
       "destination": "/fr-resources.html"
     },
     {
@@ -116,7 +142,15 @@
       "destination": "/en-resources.html"
     },
     {
+      "source": "/en/resources/",
+      "destination": "/en-resources.html"
+    },
+    {
       "source": "/fr/legal",
+      "destination": "/fr-legal.html"
+    },
+    {
+      "source": "/fr/legal/",
       "destination": "/fr-legal.html"
     },
     {
@@ -124,7 +158,15 @@
       "destination": "/en-legal.html"
     },
     {
+      "source": "/en/legal/",
+      "destination": "/en-legal.html"
+    },
+    {
       "source": "/fr/risk",
+      "destination": "/fr-risk.html"
+    },
+    {
+      "source": "/fr/risk/",
       "destination": "/fr-risk.html"
     },
     {
@@ -132,7 +174,15 @@
       "destination": "/en-risk.html"
     },
     {
+      "source": "/en/risk/",
+      "destination": "/en-risk.html"
+    },
+    {
       "source": "/fr/a-propos",
+      "destination": "/fr-a-propos.html"
+    },
+    {
+      "source": "/fr/a-propos/",
       "destination": "/fr-a-propos.html"
     },
     {
@@ -140,7 +190,15 @@
       "destination": "/en-about.html"
     },
     {
+      "source": "/en/about/",
+      "destination": "/en-about.html"
+    },
+    {
       "source": "/fr/guide-comptes-hfm",
+      "destination": "/fr-guide-comptes-hfm.html"
+    },
+    {
+      "source": "/fr/guide-comptes-hfm/",
       "destination": "/fr-guide-comptes-hfm.html"
     },
     {
@@ -148,7 +206,15 @@
       "destination": "/en-hfm-account-guide.html"
     },
     {
+      "source": "/en/hfm-account-guide/",
+      "destination": "/en-hfm-account-guide.html"
+    },
+    {
       "source": "/fr/hfm-demo-guide",
+      "destination": "/fr-hfm-demo-guide.html"
+    },
+    {
+      "source": "/fr/hfm-demo-guide/",
       "destination": "/fr-hfm-demo-guide.html"
     },
     {
@@ -156,11 +222,23 @@
       "destination": "/en-hfm-demo-guide.html"
     },
     {
+      "source": "/en/hfm-demo-guide/",
+      "destination": "/en-hfm-demo-guide.html"
+    },
+    {
       "source": "/fr/hfm-regulation",
       "destination": "/fr-hfm-regulation.html"
     },
     {
+      "source": "/fr/hfm-regulation/",
+      "destination": "/fr-hfm-regulation.html"
+    },
+    {
       "source": "/en/hfm-regulation",
+      "destination": "/en-hfm-regulation.html"
+    },
+    {
+      "source": "/en/hfm-regulation/",
       "destination": "/en-hfm-regulation.html"
     }
   ]
