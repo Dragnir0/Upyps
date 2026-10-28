@@ -104,6 +104,10 @@
   ],
   "rewrites": [
     {
+      "source": "/(favicon\\.svg|apple-touch-icon\\.png|icon-512\\.png|og\\.png|main\\.js|schedule\\.js|styles\\.css)",
+      "destination": "/$1"
+    },
+    {
       "source": "/fr/resources",
       "destination": "/fr-resources.html"
     },
