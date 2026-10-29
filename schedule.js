@@ -15,6 +15,8 @@ window.UPYPS_SCHEDULE = {
   'demo': { from: '2026-11-09' },
   'insights': { from: '2026-11-09' },
   'etfs': { from: '2026-11-12' },
+  'live': { from: '2026-11-16' },
+  'tradersboard': { from: '2026-11-23', hold: true },
   'advantages': { from: '2026-11-30', hold: true },
   'follower': { from: '2026-11-23', hold: true },
   'strategy': { from: '2026-11-23', hold: true },
