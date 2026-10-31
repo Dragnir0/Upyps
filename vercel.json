@@ -54,7 +54,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https://banner-api.hfm.com; font-src 'self'; frame-src https://prices.hfmarkets.com https://banner-api.hfm.com; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self'; img-src 'self' data: https://banner-api.hfm.com; font-src 'self'; frame-src https://prices.hfmarkets.com https://banner-api.hfm.com; connect-src 'self' https://va.vercel-scripts.com; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
         },
         {
           "key": "X-Content-Type-Options",
